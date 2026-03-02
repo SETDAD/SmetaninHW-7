@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.demoqa'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testImplementation 'com.codeborne:selenide:7.0.1'
+    testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.14.0'
+    testImplementation 'commons-io:commons-io:2.15.0'
+    testImplementation 'com.codeborne:pdf-test:1.5.0'
+    testImplementation 'com.codeborne:xls-test:1.4.3'
+    testImplementation 'com.opencsv:opencsv:5.9'
+    testImplementation'org.assertj:assertj-core:3.6.1'
+}
+
+test {
+    useJUnitPlatform()
+}
