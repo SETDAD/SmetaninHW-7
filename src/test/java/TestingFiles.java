@@ -25,7 +25,7 @@ public class TestingFiles {
     @Test
     void xlsxFileInZipParsingTest() throws Exception {
         try (ZipInputStream inputStream = new ZipInputStream(
-                cl.getResourceAsStream("ZIP/Files.zip")
+                cl.getResourceAsStream("zip/Files.zip")
         )) {
             ZipEntry entry;
             String i = "Filexlsx.xlsx";
@@ -45,7 +45,7 @@ public class TestingFiles {
     @Test
     void pdfFileInZipParsingTest() throws Exception {
         try (ZipInputStream inputStream = new ZipInputStream(
-                cl.getResourceAsStream("ZIP/Files.zip")
+                cl.getResourceAsStream("zip/Files.zip")
         )) {
             ZipEntry entry;
             String i = "Filepdf.pdf";
@@ -64,7 +64,7 @@ public class TestingFiles {
     @Test
     void csvFileInZipParsingTest() throws Exception {
         try (ZipInputStream inputStream = new ZipInputStream(
-                cl.getResourceAsStream("ZIP/Files.zip")
+                cl.getResourceAsStream("zip/Files.zip")
         )) {
             ZipEntry entry;
             String i = "Filecsv.csv";
@@ -85,7 +85,7 @@ public class TestingFiles {
     @Test
     void jsonFileParsing() throws Exception {
         try (Reader reader = new InputStreamReader(
-                cl.getResourceAsStream("JSON/car.json")
+                cl.getResourceAsStream("json/car.json")
         )) {
             Car actual = mapper.readValue(reader, Car.class);
             assertEquals("Toyota", actual.getValue());
